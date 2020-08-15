@@ -2,7 +2,7 @@ import datetime as dt
 from bs4 import BeautifulSoup
 
 
-def getFinancialYear():
+def get_financial_year():
     today = dt.datetime.today()
     current_year = today.year
     date_difference = (dt.date(today.year, 3, 31) -
