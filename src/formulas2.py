@@ -1,5 +1,3 @@
-
-
 def MACD(data):
     df = data.copy()
 
@@ -10,3 +8,6 @@ def MACD(data):
     df['MACD'] = df['MA_Fast'] - df['MA_Slow']
     # SIGNAL
     df['Signal'] = df['MACD'].ewm(span=9, min_periods=9).mean()
+    df.dropna(inplace=True)
+
+    return df
